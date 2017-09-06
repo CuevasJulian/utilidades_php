@@ -50,7 +50,6 @@ for($i = 0 ; $i < count($matchsTitles[3]) ; $i++){
 	
 }
 
-$img = "";
 if(array_key_exists("twitter:image:src", $html)){
 	array_push($imgArray, $html["twitter:image:src"]);
 }
@@ -61,15 +60,13 @@ if(array_key_exists("og:image", $html)){
 	array_push($imgArray, $html["og:image"]);
 }
 
-if($img == ""){
-	$img = $imgArray;
-}
+
 
 if($html["title"] == "" || $html["title"] == null){
-	$obj = ["titulo" => $titleArray , "descripcion" => $html["description"] , "imagen" => $img];
+	$obj = ["titulo" => $titleArray , "descripcion" => $html["description"] , "imagen" => $imgArray];
 }else{
 	array_push($titleArray, $html["title"]);
-	$obj = ["titulo" => $titleArray , "descripcion" => $html["description"] , "imagen" => $img];
+	$obj = ["titulo" => $titleArray , "descripcion" => $html["description"] , "imagen" => $imgArray];
 }
 
 
