@@ -22,7 +22,7 @@ de javascript puedes enviarle una *url* que el php respondera con un json con 3 
 *AJAX REQUEST*
 
 > $.ajax({  
->   url:"getInfoWeb.php" // direccion de getInfoWeb.php en tu computador  
+>   url:"getInfoWeb.php", // direccion de getInfoWeb.php en tu computador  
 >   type:"POST",  
 >   data:{"url":"www.algo.com"},  
 >   success:function(result){    
